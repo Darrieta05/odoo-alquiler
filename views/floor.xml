@@ -1,0 +1,35 @@
+<odoo>
+  <data>
+
+
+    <!-- List Local -->
+    <record model="ir.ui.view" id="alquiler_local_floor_view">
+      <field name="name">Pisos</field>
+      <field name="model">alquiler.floor</field>
+      <field name="arch" type="xml">
+        <tree string="Floors">
+          <field name="name"/>
+          <field name="floor_number"/>
+          <field name="id_building"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- create local form -->
+    <record model="ir.ui.view" id="alquiler_floor_form">
+      <field name="name">Pisos</field>
+      <field name="model">alquiler.floor</field>
+      <field name="arch" type="xml">
+        <form string="Floors">
+          <sheet>
+            <h1>
+                <field name="name" placeholder="Nombre del piso"/>
+            </h1>
+            <field name="floor_number"/>
+            <field name="id_building"/>
+          </sheet>
+        </form>
+      </field>
+    </record>
+  </data>
+</odoo>

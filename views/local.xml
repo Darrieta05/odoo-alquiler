@@ -1,0 +1,45 @@
+<odoo>
+  <data>
+
+
+    <!-- List Local -->
+    <record model="ir.ui.view" id="alquiler_local_list_view">
+      <field name="name">Locales</field>
+      <field name="model">alquiler.local</field>
+      <field name="arch" type="xml">
+        <tree string="Locals">
+          <field name="local_number"/>
+          <field name="id_building"/>
+          <field name="id_floor"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- create local form -->
+    <record model="ir.ui.view" id="alquiler_local_form">
+      <field name="name">Locales</field>
+      <field name="model">alquiler.local</field>
+      <field name="arch" type="xml">
+        <form string="Locales">
+          <sheet>
+            <h1>
+                <field name="local_number" placeholder="Numero de Local"/>
+            </h1>
+            <group col="4">
+              <group colspan="2">
+                <field name="area"/>
+                <field name="id_electric"/>
+                <field name="id_water"/>
+              </group>
+              <group colspan="2">
+                <field name="id_rent_doc"/>
+                <field name="id_building"/>
+                <field name="id_floor"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+  </data>
+</odoo>

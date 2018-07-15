@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <menuitem name="Alquileres" id="alquiler_root_menu"/>
+
+    <record model="ir.actions.act_window" id="action_alquiler_local">
+        <field name="name">Locales</field>
+        <field name="res_model">alquiler.local</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_alquiler_building">
+        <field name="name">Edificios</field>
+        <field name="res_model">alquiler.building</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_alquiler_floor">
+        <field name="name">Pisos</field>
+        <field name="res_model">alquiler.floor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_alquiler_alquiler">
+        <field name="name">Alquileres</field>
+        <field name="res_model">alquiler.alquiler</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Alquileres" id="alquler_alquiler_menu" parent="alquiler_root_menu"
+              sequence="1" action="action_alquiler_alquiler"/>
+
+    <menuitem name="Locales" id="alquler_local_menu" parent="alquiler_root_menu"
+              sequence="2" action="action_alquiler_local"/>
+
+    <menuitem name="Edificios" id="alquler_building_menu" parent="alquiler_root_menu"
+              sequence="3" action="action_alquiler_building"/>
+
+    <menuitem name="Pisos" id="alquler_floor_menu" parent="alquiler_root_menu"
+              sequence="4" action="action_alquiler_floor"/>
+</odoo>

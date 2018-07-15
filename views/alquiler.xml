@@ -1,0 +1,52 @@
+<odoo>
+  <data>
+    <!-- List Local -->
+    <record model="ir.ui.view" id="alquiler_alquiler_view">
+      <field name="name">Alquiler</field>
+      <field name="model">alquiler.alquiler</field>
+      <field name="arch" type="xml">
+        <tree string="Alquileres">
+          <field name="id" string="Identificador"/>
+          <field name="write_date" string="Fecha de modificación"/>
+          <field name="create_date" string="Fecha de creación"/>
+          <field name="renter" string="Usuario"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- create local form -->
+    <record model="ir.ui.view" id="alquiler_alquiler_form">
+      <field name="name">Aquiler</field>
+      <field name="model">alquiler.alquiler</field>
+      <field name="arch" type="xml">
+        <form string="Alquileres">
+          <sheet>
+            <field name="renter"/>
+            <notebook>
+              <page string="General">
+                <group>
+                  <field name="rent"/>
+                  <field name="rent_maintenance"/>
+                  <field name="start_date"/>
+                  <field name="end_date"/>
+                  <field name="anual_raise_percentage"/>
+                </group>
+              </page>
+              <page string="Locales">
+                <field name="locals"/>
+              </page>
+              <page string="Facturas">
+                <field name="invoices"/>
+              </page>
+            </notebook>
+          </sheet>
+
+          <footer>
+            <button name="facturar" type="object" string="Subscribe" class="oe_highlight"/>
+          </footer>
+
+        </form>
+      </field>
+    </record>
+  </data>
+</odoo>
